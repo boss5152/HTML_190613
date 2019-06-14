@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -13,17 +13,28 @@
             // code block to be executed
         }
     </pre>
+    <p id="star">*</p>
 
     <!-- 設置三標籤 <pre> id 為 pTimes，另外兩個為<p> id分別為pSquare、pTriangle -->
 
     <script type="text/javascript">
         // 1. 使用for迴圈，列印出這個月份從1號到目前系統日
+        var d = new Date();
+        var today = d.getDate();
+        for(var i = 1;i<=today;i++){
+            console.log(i);
+        }
 
         // 2. 使用for迴圈，逐一取得陣列裡面的元素
 
         // 3. 使用 for in，逐一尋覽物件裡面的屬性
 
         // 4. 試試看，從1加到10，配合for迴圈，應該要怎麼撰寫
+        var n = 0;
+        for(var i = 1;i<=10;i++){
+            n += i;
+            console.log(n);
+        }
 
         // 6. 試試看，列印九九乘法表 (tab為 "&#9;")
 
@@ -40,6 +51,14 @@
         // ** 
         // *** 
         // **** 
+        var star = "";
+        for(var i=1;i<=3;i++){
+            for(var k=1;k<=i;k++){
+                star = star + "*" ;
+            }
+            star = star + "<br>";
+        }
+        document.getElementById("star").innerHTML = star;
     </script>
 </body>
 
